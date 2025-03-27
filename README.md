@@ -4,10 +4,11 @@ Sitio web para la venta de rodillos quita pelusas con envíos exclusivos en Lima
 
 ## Características
 
-- Diseño responsive y minimalista
+- Diseño responsive con tema claro moderno
 - Formulario de contacto que redirecciona a WhatsApp
-- Sistema de stock integrado con Supabase
+- Sistema de stock conectado a base de datos PostgreSQL
 - Interfaz de usuario interactiva con animaciones
+- Sistema de colores basado en variables CSS
 
 ## Tecnologías utilizadas
 
@@ -15,8 +16,8 @@ Sitio web para la venta de rodillos quita pelusas con envíos exclusivos en Lima
 - React y JavaScript
 - Tailwind CSS para estilos
 - Framer Motion para animaciones
-- Supabase como base de datos
-- Prisma para ORM
+- PostgreSQL como base de datos
+- Prisma como ORM
 
 ## Configuración
 
@@ -24,20 +25,35 @@ Sitio web para la venta de rodillos quita pelusas con envíos exclusivos en Lima
 2. Instala las dependencias: `pnpm install`
 3. Configura las variables de entorno en el archivo `.env`:
    ```
-   DATABASE_URL="postgresql://postgres:password@db.supabase.co:5432/postgres"
-   NEXT_PUBLIC_SUPABASE_URL=https://your-project-url.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+   DATABASE_URL="postgresql://postgres:password@db.provider.com:5432/postgres"
+   DIRECT_URL="postgresql://postgres:password@db.provider.com:5432/postgres"
    ```
 4. Ejecuta las migraciones: `npx prisma migrate dev`
 5. Inicia el servidor de desarrollo: `pnpm dev`
 
 ## Estructura del proyecto
 
-- `/src/app` - Páginas y layout principal
-- `/src/components` - Componentes UI y de marketing
-- `/src/lib` - Configuración de la base de datos
+- `/src/app` - Páginas, layout y API routes
+- `/src/components/ui` - Componentes de interfaz reutilizables
+- `/src/components/marketing` - Componentes específicos para marketing
+- `/src/lib` - Utilidades y configuración de la base de datos
 - `/prisma` - Esquema y migraciones de la base de datos
 - `/public` - Imágenes y archivos estáticos
+
+## Personalización
+
+El proyecto utiliza variables CSS para facilitar la personalización:
+
+```css
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  --accent: #044e3b;
+  --accent-rgb: 4, 78, 59;
+}
+```
+
+Puedes cambiar estos valores en `src/app/globals.css` para actualizar todos los colores del sitio de manera consistente.
 
 ## Despliegue
 

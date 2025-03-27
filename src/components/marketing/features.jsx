@@ -49,7 +49,7 @@ export function Features() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ 
                 y: -10,
-                boxShadow: '0 20px 25px -5px rgba(4, 78, 59, 0.1), 0 10px 10px -5px rgba(4, 78, 59, 0.05)',
+                boxShadow: '0 20px 25px -5px rgba(var(--accent-rgb), 0.1), 0 10px 10px -5px rgba(var(--accent-rgb), 0.05)',
                 transition: { duration: 0.2 }
               }}
             >

@@ -17,9 +17,13 @@ export function ContactForm() {
   useEffect(() => {
     const fetchStock = async () => {
       try {
-        // Aquí se podría implementar la consulta real a la base de datos
-        // para obtener el stock disponible
-        setFormData(prev => ({ ...prev, stock: 50 }));
+        // Obtener stock real de la API
+        const response = await fetch('/api/stock');
+        const data = await response.json();
+        
+        if (data && data.cantidad) {
+          setFormData(prev => ({ ...prev, stock: data.cantidad }));
+        }
       } catch (error) {
         console.error('Error al cargar el stock:', error);
       }
@@ -51,7 +55,7 @@ export function ContactForm() {
     setLoading(true);
     
     // Construir mensaje para WhatsApp
-    const mensaje = `Hola, estoy interesado en comprar el rodillo(s) quita pelusas. Mis datos son:\nNombre: ${formData.nombre}\nDirección: ${formData.direccion}`;
+    const mensaje = `Hola, estoy interesado en comprar ${formData.cantidad} rodillo(s) quita pelusas. Mis datos son:\nNombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nDirección: ${formData.direccion}`;
     
     // Codificar el mensaje para la URL
     const mensajeCodificado = encodeURIComponent(mensaje);
@@ -103,7 +107,7 @@ export function ContactForm() {
                 name="nombre" 
                 value={formData.nombre} 
                 onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none"
+                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none"
                 placeholder="Tu nombre completo"
                 required
               />
@@ -119,7 +123,7 @@ export function ContactForm() {
                 name="telefono" 
                 value={formData.telefono} 
                 onChange={handleChange}
-                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none"
+                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none"
                 placeholder="Tu número de teléfono"
                 required
               />
@@ -135,7 +139,7 @@ export function ContactForm() {
                 value={formData.direccion} 
                 onChange={handleChange}
                 rows="3"
-                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none"
+                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none"
                 placeholder="Tu dirección en Lima"
                 required
               ></textarea>
@@ -153,7 +157,7 @@ export function ContactForm() {
                 onChange={handleChange}
                 min="1" 
                 max={formData.stock}
-                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none"
+                className="w-full p-3 rounded-md bg-gray-50 border border-gray-200 text-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none"
                 required
               />
             </div>
@@ -162,7 +166,7 @@ export function ContactForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#044e3b] text-white px-8 py-3 rounded-md font-medium inline-block text-center transition-colors duration-200 w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all"
+                className="bg-[var(--accent)] hover:bg-[var(--accent)/90] text-white px-8 py-3 rounded-md font-medium inline-block text-center transition-colors duration-200 w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all"
               >
                 {loading ? 'Procesando...' : 'Realizar Pedido por WhatsApp'}
               </button>

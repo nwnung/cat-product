@@ -31,7 +31,7 @@ export function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative h-[300px] md:h-[450px] w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl"
-          style={{ boxShadow: '0 20px 25px -5px rgba(4, 78, 59, 0.1), 0 10px 10px -5px rgba(4, 78, 59, 0.04)' }}
+          style={{ boxShadow: '0 20px 25px -5px rgba(var(--accent-rgb), 0.1), 0 10px 10px -5px rgba(var(--accent-rgb), 0.04)' }}
         >
           <Image
             src="/rodillo-animated.JPG"

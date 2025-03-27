@@ -25,7 +25,7 @@ export function Header() {
 
         <button 
           onClick={scrollToContact}
-          className="bg-[var(--accent)] hover:bg-[color:var(--accent)] text-white px-4 py-2 rounded-md font-medium transition-colors duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all"
+          className="bg-[var(--accent)] hover:bg-[var(--accent)/90] text-white px-4 py-2 rounded-md font-medium transition-colors duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all"
         >
           Comprar Ahora
         </button>

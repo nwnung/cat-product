@@ -33,8 +33,8 @@ export function StockCounter() {
   if (loading) {
     return (
       <div className="flex justify-center my-4">
-        <div className="inline-flex items-center space-x-2 bg-green-100 px-3 py-1 rounded-full">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="inline-flex items-center space-x-2 bg-[var(--accent)/10] px-3 py-1 rounded-full">
+          <div className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse"></div>
           <span className="text-sm text-gray-700">Cargando stock...</span>
         </div>
       </div>
@@ -44,12 +44,12 @@ export function StockCounter() {
   return (
     <div className="flex justify-center my-4">
       <motion.div 
-        className="inline-flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full shadow-sm"
+        className="inline-flex items-center space-x-2 bg-[var(--accent)/10] px-4 py-2 rounded-full shadow-sm"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse"></div>
         <span className="text-sm font-medium text-gray-700">¡Solo quedan {stock} unidades disponibles!</span>
       </motion.div>
     </div>

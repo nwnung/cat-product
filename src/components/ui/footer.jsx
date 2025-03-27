@@ -22,7 +22,7 @@ export function Footer() {
               href="https://www.tiktok.com/@michi.ayudas?_t=ZM-8v2QCnCXlVm&_r=1" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center space-x-2 text-gray-700 hover:text-[#044e3b] transition-colors"
+              className="flex items-center space-x-2 text-gray-700 hover:text-[var(--accent)] transition-colors"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -40,12 +40,12 @@ export function Footer() {
           <nav>
             <ul className="flex space-x-4 text-sm">
               <li>
-                <Link href="/terminos" className="text-gray-600 hover:text-[#044e3b] transition-colors">
+                <Link href="/terminos" className="text-gray-600 hover:text-[var(--accent)] transition-colors">
                   Términos y condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/privacidad" className="text-gray-700 hover:text-[#044e3b] transition-colors">
+                <Link href="/privacidad" className="text-gray-700 hover:text-[var(--accent)] transition-colors">
                   Política de privacidad
                 </Link>
               </li>
