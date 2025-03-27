@@ -1,0 +1,17 @@
+# IMPORTANTE
+
+manten el codigo limpio. NO ESCRIBAS COMENTARIOS A MENOS QUE TE LO PIDA.
+enfocate en ser minimalista con la pagina. es una web con un formulario que redirecciona a wsp para concretar la venta. NOSOTROS NO HACEMOS LA VENTA DIRECTA EN LA MISMA web
+
+tendremos una db sencilla. que usara supabase y prisma. esta db tendra una tabla llamada "Stock" con 50und
+que se actualizaran manualmente (yo lo hare)
+
+recuerda tener buenas practicas y enfocarte en el responsive design dado que de ahi llegaran practicamente todos nuestros clientes.
+
+# STACK
+- NEXTJS CON JAVASCRIPT Y APP ROUTER
+- REACT + TAILWIND + SHADCN + FRAMER MOTION PARA LA UI
+- SUPABASE PARA LA DB
+- PRISMA PARA LAS ACTIONS
+
+NO TE OLVIDES DE INSTALAR SUS DEPENDENCIAS!!!!
