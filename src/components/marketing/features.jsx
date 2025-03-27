@@ -8,17 +8,17 @@ export function Features() {
     {
       title: "Pelusa Off: Limpieza Definitiva 🧹",
       description: "Despídete de las molestas pelusas en un segundo. Un movimiento, superficie limpia. No más residuos, no más vergüenza.",
-      image: "/feature-1.PNG"
+      image: "/feature-1.png"
     },
     {
       title: "Reutilización Express 💦",
       description: "Adiós a los rollos de toda la vida. Con una rápida pasada bajo el agua, regeneras tu removedor de pelusas al 100%. Limpio, rápido y sin complicaciones.",
-      image: "/feature-2.PNG"
+      image: "/feature-2.png"
     },
     {
       title: "Entrega Express Lima: 10 Soles de Envío 🚚💨",
       description: "Enviamos tu removedor de pelusas a cualquier punto de Lima por solo 10 soles. Sin zonas excluidas, sin letras pequeñas.",
-      image: "/feature-3.PNG"
+      image: "/feature-3.png"
     }
   ];
 

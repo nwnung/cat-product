@@ -34,7 +34,7 @@ export function HeroSection() {
           style={{ boxShadow: '0 20px 25px -5px rgba(var(--accent-rgb), 0.1), 0 10px 10px -5px rgba(var(--accent-rgb), 0.04)' }}
         >
           <Image
-            src="/rodillo-animated.JPG"
+            src="/rodillo-animated.jpg"
             alt="Rodillo Quita Pelusas"
             fill
             quality={90}
