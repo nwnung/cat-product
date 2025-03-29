@@ -28,3 +28,28 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), 'Lexend', sans-serif;
 }
+
+/* Estilos para botones */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Estilos específicos para botones con color de acento */
+button.bg-\[var\(--accent\)\] {
+  background-color: var(--accent);
+  color: white;
+}
+
+button.bg-\[var\(--accent\)\]:hover {
+  background-color: rgba(var(--accent-rgb), 0.9);
+  color: white;
+}

@@ -30,18 +30,20 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative h-[300px] md:h-[450px] w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl"
+          className="relative h-[300px] md:h-[450px] w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-white p-4"
           style={{ boxShadow: '0 20px 25px -5px rgba(var(--accent-rgb), 0.1), 0 10px 10px -5px rgba(var(--accent-rgb), 0.04)' }}
         >
-          <Image
-            src="/rodillo-animated.jpg"
-            alt="Rodillo Quita Pelusas"
-            fill
-            quality={90}
-            priority
-            className="object-cover rounded-xl p-2"
-            style={{ padding: '8px' }}
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-lg"
+            style={{ boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' }}
+          >
+            <source src="/IMG_0333.mov" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
         </motion.div>
       </div>
     </section>

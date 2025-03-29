@@ -13,7 +13,7 @@ export function Features() {
     {
       title: "Reutilización Express 💦",
       description: "Adiós a los rollos de toda la vida. Con una rápida pasada bajo el agua, regeneras tu removedor de pelusas al 100%. Limpio, rápido y sin complicaciones.",
-      image: "/feature-2.png"
+      image: "/rodillo.jpg"
     },
     {
       title: "Entrega Express Lima: 10 Soles de Envío 🚚💨",

@@ -36,21 +36,6 @@ export function Footer() {
               <span>Síguenos en TikTok</span>
             </Link>
           </div>
-          
-          <nav>
-            <ul className="flex space-x-4 text-sm">
-              <li>
-                <Link href="/terminos" className="text-gray-600 hover:text-[var(--accent)] transition-colors">
-                  Términos y condiciones
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacidad" className="text-gray-700 hover:text-[var(--accent)] transition-colors">
-                  Política de privacidad
-                </Link>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </motion.footer>

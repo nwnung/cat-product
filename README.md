@@ -68,3 +68,29 @@ Para iniciar el servidor en producción:
 ```bash
 pnpm start
 ```
+
+### Requisitos para el despliegue
+
+1. Asegúrate de tener las siguientes variables de entorno configuradas:
+   ```
+   DATABASE_URL="postgresql://postgres:password@db.provider.com:5432/postgres"
+   DIRECT_URL="postgresql://postgres:password@db.provider.com:5432/postgres"
+   NODE_ENV="production"
+   ```
+
+2. La base de datos debe estar configurada y accesible.
+
+3. Para un despliegue óptimo, se recomienda:
+   - Usar un CDN para servir los archivos estáticos
+   - Configurar un proxy inverso (como Nginx)
+   - Habilitar compresión GZIP
+   - Configurar caché para archivos estáticos
+
+### Optimizaciones de rendimiento
+
+El proyecto incluye las siguientes optimizaciones:
+- Imágenes optimizadas con Next.js Image
+- Carga diferida de componentes
+- Compresión de assets
+- Caché de API
+- Animaciones optimizadas con Framer Motion
