@@ -41,7 +41,7 @@ export function HeroSection() {
             className="w-full h-full object-cover rounded-lg"
             style={{ boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' }}
           >
-            <source src="/IMG_0333.mov" type="video/mp4" />
+            <source src="/IMG_0333.mov" type="video/quicktime" />
             Tu navegador no soporta el elemento de video.
           </video>
         </motion.div>
